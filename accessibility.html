@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilgjengelighet</title>
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="index1">
+        <nav>
+        <div class="index4"> <img src="./images/student-icon.png" alt="Student ikon"> </div>
+        <label for="index2">&#9776;</label>
+        <input type="checkbox" id="index2"/>
+            <ul id="index3" >
+                <li><a href="index.html">HJEM</a></li>
+                <li><a href="reflection.html">REFLEKSJON</a></li>
+                <li><a href="accessibility.html">TILGJENGELIGHET</a></li>
+                <li><a href="topical.html">AKTUELT</a></li>
+                <li><a href="fun.html">MORO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main> 
+        <section class="accessSection" >
+            
+                <div class="access access1">
+                    <h1>Tilgjengelighet</h1>
+                    <h2>Hva er tilgjengelighet?</h2>
+                    <p>
+                        <em>Tilgjengelighet</em> kan i følge Mozilla developer 
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a>, 
+                        beskrives som egenskaper web-innhold må ha for at så mange mennesker som mulig skal få tilgang til å benytte seg av det. 
+                        Tilgjengelighet har med andre ord en vid målgruppe, også utover mennesker med nedsatt funksjonevne.
+                        Med mennesker med nedsatt funksjonsevne, menes mennesker som for eksempel har svekket
+                        syn, hørsel, tale, fysisk funksjonevne og kognitiv funksjonsevne.   
+                        W3Schools har utarbeidet internasjonale retningslinjer for tilgjengelighet for   
+                        web-innhold som også benevnes som WCAG. Versjon 2.1 av den 5. juni 2018 er den nyeste versjonen.    
+                        WCAG inneholder retningslinjer som beskriver tre nivåer av suksesskriterier.   
+                        Det laveste nivået er A, så AA og AAA er det høyeste nivået.    
+                        WCAG 2.1 finnes her:   
+                        <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>
+                    </p>
+                </div>
+                
+                <div class="access access2">
+                    <h2>Våre prioriteringer i arbeidet med tilgjengelig web-innhold</h2>
+                    <h3>Ulike brukergrupper</h3>
+                    <p>
+                        Vi la til grunn ulike brukergrupper for nettsidene. For mennesker med synslidelser vil det 
+                        for eksempel være viktig å sørge for tilstrekkelig kontrast mellom forgrunns- og bakgrunnsfarger, 
+                        samt bruke fargekombinasjoner som ikke gjør det vanskelig å skille innhold.    
+                        For mennesker som ikke kan benytte musepeker vil for eksempel navigasjon med tastatur være viktig.   
+                        De fleste mennesker vil ha utbytte av riktig balanse mellom "whitespace" og områder med innhold.   
+                        Videre la vi til grunn de anbefalte tekstavstandene for å oppnå sukksesskriteriet AA i WCAG punkt 1.4.12 
+                        <a href="https://www.w3.org/TR/WCAG21/#text-spacing">Success Criterion 1.4.12 Text Spacing</a>.    
+                        Her anbefales linje-høyde til å være minst 1,5 ganger skriftstørrelse og avstanden mellom bokstaver og ord anbefales til å være     
+                        henholdsvis 0,16 og 0,12 ganger skriftstørrelse. Videre benyttet vi oss av <a href="https://www.fontpair.co/fontpair.co">Fontpair</a>      
+                        for å finne to skrifttyper som passet sammen.
+                    </p>
+    
+                    <h3>Skjermleser og responsivt design</h3>
+                    <p>
+                        For at skjermleser skal kunne lese nettsidene la vi vekt på å bruke alt-tekst på bilder.  
+                        Når det gjelder HTML-koden benyttet vi semantiske element som <em>nav</em>, <em>header</em>, <em>main</em>, <em>section</em> og <em>footer</em>.
+                        I tillegg mener vi at responsivt design også er viktig for å ivareta tilgjengelighet, og    
+                        har derfor utviklet løsninger for mobil, nettbrett og PC.  
+                    </p> 
+                </div>
+
+                <div class="access access3">
+                    <h2>Skjermbilder fra testing av tilgjengelighet</h2> 
+                    <div ><img src="./images/achecker.jpg" alt="Skjermbilde av AChecker test" style="width: 100%;height: 100%;"></div>
+                    <div><img src="./images/achecker-potential.JPG" alt="Skjermbilde av potential problems i AChecker test"></div>
+                    <div><img src="./images/w3checker.png" alt="Skjermbilde av W3Checker test"></div>
+                    <div><img src="./images/htmlchecker.JPG" alt="Skjermbilde av HTML checker"></div>
+                    <div><img src="./images/accessibility_kontrast_test2.png" alt="Skjermbilde av kontrast test"></div>
+                </div>
+        
+                <div class="access access4">
+                    <h2>Gjennomføring av tester</h2>
+                    <p>Vi benyttet AChecker som testverktøy for tilgjengelighet <a href="https://achecker.achecks.ca/checker/index.php">AChecker Web accessibility checker</a></p>
+                    <p>For å undersøke kontraster mellom farger, brukte vi WebAIM's testverktøy <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a></p>
+                    <p>Fargeblind-filteret til Toptal ble også benyttet <a href="https://www.toptal.com/designers/colorfilter">Toptal Colorblind Web Page Filter</a></p>
+                    <p>HTML-koden ble undersøkt ved bruk av W3Schools' "Markup Validation Service" <a href="https://validator.w3.org/">W3C Markup Validation Service</a></p>
+                    <p>CSS-koden ble undersøkt ved bruk av W3Schools' "CSS Validation Service" <a href="https://jigsaw.w3.org/css-validator/">CSS Validation Service</a></p>
+                    <p>For å teste ut hvordan skjermleser fungerte på siden, benyttet vi skjermleseren NonVisual Desktop Access <a href="https://www.nvaccess.org/">NonVisual Desktop Access</a></p>   
+                    
+                    <h2>Funn i forbindelse med testingen</h2>
+                    <h3>Bruk av skjermleser</h3>
+                    <p>
+                        Ved å benytte skjermleseren klarte vi å bruke navigasjonsmenyen til å navigere på siden, og skjermleseren klarte å lese alt av innhold.  
+                        Skjermleseren slet litt med uttale på blant annet engelske lenker og navn som OsloMet. Det var også noen steder hvor skjermleseren stoppet 
+                        opp og henviste til kode som vi ikke så i vår kode.
+                    </p>
+                    <h3>Bruk av test-verktøy</h3>
+                    <p>
+                        I AChecker fikk vi en del potensielle feil som gikk på språk da vi benyttet både norsk og engelsk i kode.    
+                        Vi endret på bakgrunn av testen, og har gjort et bevisst valg å ha siden på norsk.
+                        Dette er selvfølgelig ekskluderende for de som ikke kan norsk, men vi har valgt å optimalisere denne for et norsk publikum.
+                        Dersom vi hadde hatt mer tid, hadde vi prioritert å lage en løsning hvor man også kan velge siden på engelsk.
+                        Ved test i Achecker fikk vi oppgitt at nettsidene hadde 1 problem og 55 potensielle problemer. I de to øverste  
+                        skjermbildene er disse illustrert. Vi rettet opp problemet ved å endre nivået på overskriften.  
+                        Det potensielle problemet vi har lagt ved skjermbilde av var at bakgrunnsbildet kunne inneholde tekst med dårlig kontrast.
+                        Vi valgte å ignorere dette, da det ikke er meningen at teksten på skjermen på bildet skal leses.
+                        Ved å undersøke kontrastfarger, fant vi at svart tekstfarge på gul-gradvis oransje oppnådde høy kontrast.
+                        Skjermbildet som er vedlagt viser at også bakgrunnsfargene oppnår AA kontrast nivå. 
+                        Vi benyttet oss også av fargeblindhet-filteret til Toptal, her ser det imidlertid ut til at bakgrunnsfargene våre ikke ble oppfattet.
+                    </p>
+                </div>
+        </section>     
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h1>klarte det! Laget av studenter ved TKD, OsloMet 2021.</h1> 
+            <p>Lisensiert med Creative Commons</p> 
+            <ul class="ccicon">
+                <li> <img src="./images/cc-circle.svg" alt="Creative Commons circle logo"></li>
+                <li><img src="./images/cc-by.svg" alt="Creative Commons BY circled human figure"></li>
+                <li><img src="./images/cc-nc.svg" alt="Creative Commons NC non-commercial"></li>
+                <li><img src="./images/cc-sa.svg" alt="Creative Commons SA share alike"></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>CC BY-NC-SA 4.0.</p>
+            <p>Ikonet "student" i header laget av Wilson Joseph fra The Noun Project.</p>
+        </div>
+    </footer>
+</body>
+</html>

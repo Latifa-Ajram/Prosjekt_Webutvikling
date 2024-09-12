@@ -1,0 +1,769 @@
+/* Fonter til siden: */
+@font-face {
+    font-family: 'Chivo-Bold';
+    src: url(./fonts/Chivo-Bold.ttf)
+}
+
+@font-face{
+    font-family: 'Overpass-Regular';
+    src: url(./fonts/Overpass-Regular.ttf)
+}
+
+/* Generelle CSS rules som gjelder gjennomgående med mindre @media er spesifisert: */
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(38,70,83, 1), rgb(38,70,83,0.5));
+    margin: 0;
+    padding: 20px;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 1.92; 
+}
+  
+h1 {
+    font-family: 'Chivo-Bold', Helvetica, sans-serif;
+    font-size: 24px;
+}
+h2 {
+    font-family: 'Chivo-Bold', Helvetica, sans-serif;
+    font-size: 20px;
+}
+h3 {
+    font-family: 'Chivo-Bold', Helvetica, sans-serif;
+    font-size: 18px;
+}
+p {
+    font-family: 'Overpass-Regular', Helvetica, sans-serif;
+}
+
+/*student logo i toppmeny */
+.index4 img {
+    display: flex;
+    align-content: flex-end;
+    position:absolute;
+    margin-top: 1px;
+    margin-left: 80%;
+    width: 30px;
+}
+
+/*hamburger meny for tablet and dekstop
+courtesy fra https://code-boxx.com/simple-responsive-pure-css-hamburger-menu */
+#index1 {
+    width: 100%;
+    /* gradient background courtesy fra https://www.w3schools.com/css/css3_gradients.asp */
+    background:linear-gradient(60deg, #2a9d8f,#2a9d8f,#207e81,#2f62d1,#2e7feb);
+}
+#index1 label, #index2 {
+    display: none;
+}
+#index3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+#index3 li {
+    list-style: none;
+    padding: 1rem;
+    color: transparent ;
+    text-align: center;
+    box-sizing: border-box;
+}
+#index3 a {
+    padding: 0.5rem;
+    color: black; 
+    text-decoration: none;
+    text-align: center;
+}
+#index3 li:hover {
+    background: #e9c46a;
+}
+
+/*main index deles i 60 , 25 prosent grid*/
+.index5 {
+    display: grid;
+    grid-template-rows: 60% 25%;
+}
+
+/*velkommen box på forsiden*/
+.index5 :nth-child(2) {   
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 12px;
+    background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+}
+.index5 :nth-child(2)>h1 {
+    padding-top: 2rem;
+    word-spacing:0.1em;
+}
+.index5 :nth-child(2)>p {
+    padding-bottom: 2rem;
+    word-spacing:0.1em;
+}
+
+/*image i main index */
+.index5>div>img { 
+    height: 90%;
+    width: 100%;
+    box-shadow: 0 0 10px 0 black;
+    position: relative;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    top: 0.5rem;
+    left: 0;  
+}
+
+/*Styling av footer på alle sider*/
+footer{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background:  #264653;
+    height: auto;
+    
+    font-family: "open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: -40px;
+}
+.footer-content h1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+/*Styling til Creative Commons bilder i footer*/
+.ccicon{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.ccicon li{
+    margin: 0 10px;
+}
+.ccicon img{
+    text-decoration: none;
+    color: #fff;
+    max-width: 3rem;
+}
+.ccicon img:hover{
+    color: aqua;
+}
+.footer-bottom{
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/*Mobilskjerm bare for hamburger meny */
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size:20px ;
+    }
+    
+    /*Style til figcaption på alle bildene*/
+    .overlay-text {
+        grid-row: 1;
+        grid-column: 1;       
+        margin: auto;
+        font-size: 10px;   
+        text-align: center;  
+    }
+
+    /*main i index*/
+    #index1 input:checked ~ #index3 {
+        display: block;
+    }
+    /*hamburger meny label */
+    #index1 label {
+        display: inline-block;
+        color: #f4a261 ;
+        background: #2a9d8f;
+        font-size: 1.5em;
+        font-size: medium;
+        padding: 0.5rem;
+    }
+    #index3 {
+        display: block;
+    }
+    #index3 li {
+        width: 100%;
+        box-sizing: border-box;
+        color: transparent ;
+    }
+    /*farge og andre ting på hamburger meny label*/
+    #index3 {
+    display: none;
+    }
+    .index5 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .index4 img{
+        max-width: 2rem;
+    }
+    .index5-text {
+    margin-top: 2rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    } 
+
+    /*CSS styling for reflection.html for mobilskjermer*/
+    .reflection {
+        grid-template-columns:1fr;
+        margin-top: 2rem;
+        padding: 1rem 1rem 1rem 1rem;
+        align-items: center;
+    }
+    /*Bakgrunnsfarge og padding til div'ene i reflection*/
+    .reflection >div {
+        padding: 1rem 1rem 1rem 1rem;
+        background: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+    }
+    /*Bakgrunnsfarge, grid og tekstformatering i reflection*/
+    .refChild {
+        color:black;
+        font-size: 14px;
+        text-align: center;
+        margin: 10px;
+        padding: 40px;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;
+    }
+    /*Størrelse på bilder*/
+    .reflection > div >img {
+        width: 100%;
+    }
+
+    /*Bakgrunnsfarge, padding og formatering i accessibility*/
+    .access {
+        margin: 10px;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+    }
+    /*Bakgrunnsfarge, grid og tekstformatering i accessibility*/
+    .accessSection > div {
+        color:black;
+        font-size: 14px;
+        text-align: center;
+        margin: 10px;
+        padding: 40px;
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;
+        padding: 1rem 1rem 1rem 1rem;
+        background: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+    }
+    .access3{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px 10px;
+        box-sizing: border-box;
+        text-align: justify;
+    }
+    .access3 img{
+        max-width: 100%;
+        border: black solid;
+    }
+    .access3 div{
+        margin: 10px; 
+    }
+    .access3 h2{
+        grid-column: 1/3;
+    }
+    
+    /*Generell formatering til topical siden*/
+    .topicalChild {
+        margin: auto;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+        grid-auto-rows:minmax(80px,auto) ;
+        width: 80% ;
+    }
+    /*Bakgrunnsfarge, grid/formatering og tekstformatering til topical div'ene*/
+    .topical > div {
+        width: 100%;
+        height: 90%;
+        margin: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: wrap;
+        color:black;
+        font-size: 14px;
+        text-align: center;
+        margin: 10px;
+        padding: 40px;
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;
+        padding: 1rem 1rem 1rem 1rem;
+        background: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+    }
+    .topical > div > div >img {
+        width: 100%;
+    }
+    .topical6{
+        width: 80%;
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+/*CSS rules som gjelder for tablet screens - 600-900px*/
+@media only screen and (max-width: 960px) and (min-width: 600px){
+    body{
+        word-spacing: 2.56;
+    }
+
+    li{
+        font-weight: bold;
+    }
+    
+    /*Style til figcaption på alle bildene*/
+    .fig{
+        margin-top: -10%
+    }
+    .overlay-text {
+        grid-row: 1;
+        grid-column: 1;       
+        margin: auto;
+        font-size: 10px;   
+        text-align: center;  
+    }
+
+    /*header image logo*/
+    .index4 img {
+        margin-top: 10px;
+        margin-left: 85%;
+        width: 30px;
+        margin-top: 2%;
+        max-width: 3rem;
+    }
+    .index5-text p {  
+    font-size: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    }  
+    
+    /*Grid/formatering til reflection*/
+    .reflection {
+        grid-template-columns:repeat(auto-fit,1fr);
+        grid-template-columns:1fr;
+        margin-top: 2rem;
+        padding: 1rem 1rem 1rem 1rem;
+        align-items: center;
+    }
+
+    /*Bakgrunnsfarge og tekstformatering til reflection*/
+    .refChild {
+        color:black;
+        margin: 40px;
+        padding: 40px;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        text-align: justify;
+        word-spacing:0.1em;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;   
+    }
+    .reflection8 {
+        text-align: center;   
+        width: 75%;
+        margin: auto;
+    }
+    .reflection > div > img {
+        width: 100%;
+    }
+
+    /*Generell bakgrunnsfarge, formatering og tekstformatering til accessibility*/
+    .access {
+        margin: 10px;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+    }
+
+    /*Bakgrunnsfarge, grid/formatering og tekstformatering til accessibility div'ene*/
+    .accessSection > div {
+        color:black;
+        font-size: 14px;
+        text-align: center;
+        margin: 40px;
+        padding: 40px;
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        word-spacing:0.1em;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;
+        background: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+    }
+
+    /*Grid og formatering til klassen access3*/
+    .access3{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px 10px;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    .access3 img{
+        max-width: 100%;
+        border: black solid;
+    }
+    .access3 div{
+        margin: 10px;     
+    }
+    .access3 h2{
+        grid-column: 1/3;
+    }
+    .access6{
+        text-align: center;
+    } 
+     
+    /*Generell margin og bredde til topical*/
+    .topical{
+        margin: auto;
+        width: 100%;
+    }
+
+    /*Bakgrunnsfarge, grid/formatering og tekstformatering til topical div'ene*/
+    .topical > div {
+        width: 85%;
+        height: 90%;
+        box-sizing: border-box;
+        display:flex;
+        flex-flow: wrap;
+        color:black;
+        font-size: 14px;
+        text-align: center;
+        margin: 50px;
+        padding: 2rem 2rem 2rem 2rem;
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        word-spacing:0.1em;
+        letter-spacing: 0.04em;
+        border-radius: 12px;
+        align-content: center;
+        padding: 1rem 1rem 1rem 1rem;
+        background: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+    }
+
+    /*Bakgrunnsfarge, grid/formatering og tekstformatering til topical*/
+    .topicalChild {
+        margin: auto;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+        grid-auto-rows:minmax(80px,auto) ;
+        width: 80% ;
+    }
+    .topical > div > div >img {
+        width: 100%;
+    }
+    .topical6{
+        width: 80%;
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+/*CSS rules for dekstop screens - 960px og oppover*/
+@media only screen and (min-width: 960px) {
+    body{
+        word-spacing: 2.56;
+        width: 96vw;
+    }
+    
+    /*Style til figcaption på alle bildene*/
+    .overlay-text {
+        grid-row: 1;
+        grid-column: 1;       
+        margin: auto;
+        font-size: 10px;     
+    }
+    .fig{
+        margin-top: -10%
+    }
+    
+    /*Styling for alle lister (meny) for desktop*/
+    ul {
+        display:flex; 
+        flex-flow:row wrap ;
+    }
+    li {
+        padding: 15px;
+        margin: 10px; 
+        font-weight:bold;
+        border: none ;
+    }
+
+    /*header image logo*/
+    .index4 img {
+        margin-top: 1px;
+        margin-left: 90%;
+        width: 60px;
+        margin-top: 2%;
+        max-width: 2rem;
+    }
+    .index5 {
+        position:relative ;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .index5-text {
+        position:absolute ;
+        top: 30%;
+        width: 70%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /*CSS rules som styrer reflection.html og innholdet for desktop*/
+    .reflection {
+        height: auto;
+        margin:50px auto;
+        width: 85%;
+        display: grid;
+        grid-template-columns:  repeat(2,1fr);
+        gap: 20px 10px;
+    }
+    .refChild {
+        color:black;
+        text-align: center;
+        margin: 10px;
+        padding: 40px;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        grid-auto-rows:minmax(80px,auto) ;
+        text-align: justify;
+        border-radius: 12px;
+        align-content: center;
+        line-height: 2rem;
+    }
+    .reflection1 >img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 1em;
+        grid-column: 1;
+        grid-row:-2;
+    }
+    .reflection1 {
+        display: grid;
+    }
+    .reflection4{
+        display: grid;
+    }
+    .reflection4 >img {
+        width: 100%;
+        height: 100%;
+        margin: 1em;
+        grid-column: 1;
+        grid-row:-2;
+    }
+    .reflection5 {
+        display: grid;     
+    }
+    .reflection5 >img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 1em;
+        grid-column: 1;
+        grid-row:-2;
+      }
+
+    /*CSS rules som styrer acsess.html og innholdet for desktop*/
+    .access {
+        margin: 10px;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+    }
+    .accessSection {
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+        gap:30px 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: justify;
+        width: 90%;
+        margin: auto;
+    }
+    .access1 {
+        grid-column: 1/3;
+        margin-top: 2rem;
+    }
+    .access2 {
+        word-spacing:0rem;
+        grid-column: 1/3;
+    }
+    .access3 {
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px 10px;
+        box-sizing: border-box;
+        text-align: justify;
+    }
+    .access3 img{
+        max-width: 100%;
+        border: black solid;
+    }
+    .access3 div{
+        margin: 10px;
+        padding: 40px;
+        text-align: justify;
+        align-content: center; 
+    }
+    .access3 h2{
+        grid-column: 1/3;
+    }
+    .access4 {
+        grid-column: 1/3;
+    }
+    .access5 {
+        grid-column: 1/3;
+    }
+    .access6 {
+        grid-column:1/3;
+        text-align: center;
+    }
+
+    /* CSS rules som styrer topical.html og innholdet for desktop. Delt i en kolonne og fire rader*/ 
+    .topical {
+        display: grid;
+        padding: 10px;
+        grid-template-columns: 1fr;
+        text-align: justify;
+        gap:20px 10px;
+        box-sizing: border-box;
+        grid-template-rows: repeat(4,1fr);
+        height: auto;
+        margin:50px auto;  
+        margin-top: -40px;
+        line-height: 1.5rem;
+    }
+    .topical-text {
+        grid-column: 2/3;
+        line-height: 2em;
+    }
+    .topicalChild {
+        margin: auto;
+        padding: 40px;
+        text-align: justify;
+        line-height: 2rem;
+        background-image: linear-gradient(45deg, rgb(233,196,106,1), rgb(244,162,107,1), rgb(244,162,107,0.6));
+        border-radius: 12px;
+        grid-auto-rows:minmax(80px,auto) ;
+        width: 80% ;
+    }
+    .topical1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }   
+    .image-topical {
+        text-align: center;
+        font-size: 10px;
+        padding-top: 5%;
+    }
+    .image-topical1 {
+        margin: auto;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        display: grid;
+    }
+    .image-topical1>img {
+        width: 90%;
+        grid-column: 1;
+        grid-row:-2;
+    }
+    .topical1-p {
+        grid-column: 2/3;
+        line-height: 2em;
+    }
+    .topical1-h1{
+        grid-column: 1/2;
+    }
+    .topical2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1/2;
+        margin-top: 40px;
+    }
+    .image-topical2>div{
+        grid-column: 1/2;
+    }
+    .topical2Div{
+        grid-column: 1/2;
+    }
+    .image-topical2>img {
+        width: 80%;
+    }
+    .topical3{
+        margin-top: -80px;
+    }
+    .topical5>figcaption{
+        margin-top: -10%;
+    }
+    .topical6{
+        width: 80%;
+        margin-top: 1em;
+        text-align: center;
+    }
+}

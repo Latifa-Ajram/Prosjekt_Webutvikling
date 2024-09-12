@@ -1,0 +1,338 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+    margin: auto;
+    background-color: #00FAEC;
+}
+
+#fun1{
+    height: 95vh;
+    width: 100%;
+    position: fixed;
+    background-image: contain ;
+}
+
+.credit{
+    z-index: 1;
+    font-size: small;
+    color: #0bcdf4;
+}
+
+.credit > a{
+    color: #0bcdf4;
+}
+
+/*header styling*/
+.index{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    grid-gap: 60px;
+}
+/* student favicon */
+.index4 img{
+    display: flex;
+    align-content: flex-end;
+    position:absolute;
+    margin-top: 1px;
+    margin-left: 80%;
+    width: 30px;
+}
+
+/*header design*/
+#index1 {
+    width: 100%;
+    background:linear-gradient(60deg, #2a9d8f,#2a9d8f,#207e81,#2f62d1,#2e7feb);
+    font-weight: bold;
+}
+/*hiding hamburger meny for tablet and desktop*/
+#index1 label, #index2 {
+    display: none;
+}
+
+#index3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#index3 li {
+    list-style: none;
+    padding: 1rem;
+    color: transparent ;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+#index3  a {
+    padding: 0.5rem;
+    color: black; 
+    text-decoration: none;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#index3 li:hover {
+    background: #e9c46a;
+}
+
+/*Hamberger meny for enheter under 600px*/
+@media only screen and (max-width: 600px){
+    
+    #index3 {
+        display: block;
+        
+    }
+
+    #index3 li{
+        width: 100%;
+        box-sizing: border-box;
+        color: transparent ;
+    }
+    /*hamburger meny label*/
+    #index1 label{
+         display: inline-block;
+         color: #f4a261 ;
+         background: #2a9d8f;
+         font-size: 1.5em;
+         font-size: medium;
+         padding: 0.5rem;
+    }
+
+    #index3 {
+        display: none;
+        
+    }
+
+    #index1 input:checked ~ #index3 {
+        display: block;
+    }
+}
+
+
+/* Animasjoner for å få fiskene til å bevege seg over skjermen: */
+
+.walking {
+    width: 100%;
+    margin: 10px;  
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(1) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 8s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(2) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: a 6s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(3) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 6s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(4) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 7s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(5) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: a 4s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(6) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 9s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(7){
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 10s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(8){
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: a 7s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(9) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: b 4s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(10) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: c 5s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(11) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: c 4s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(12) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: c 6s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(13) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: c 7s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(14) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: d 4s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(15) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: f 10s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(16) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: d 6s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(17) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: e 8s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(18) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 200px; 
+    animation: d 10s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(19) {
+    position: fixed;
+   right: 50%;
+    top:50%;
+    width: 200px; 
+    animation: f 9s linear 1s infinite;
+}
+/*kode for at fiskene begynner i midten og har forskjelige skjermtid og forskjelige skjermbevegelser*/
+.walking img:nth-child(20) {
+    position: fixed;
+   left: 50%;
+    top: 50%;
+    width: 230px; 
+    animation: e 10s linear 1s infinite;
+}
+/*kode for  skrå bevegelse*/
+@keyframes c{
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    100% {
+        transform: translatex(300px) translatey(300px);
+    }
+}
+
+/*kode for  skrå bevegelse*/
+
+@keyframes d{
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    100% {
+        transform: translatex(-300px) translatey(-300px);
+    }
+}
+
+/*kode for  skrå bevegelse*/
+@keyframes e{
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    100% {
+        transform: translatex(300px) translatey(-300px);
+    }
+}
+
+/*kode for  skrå bevegelse*/
+@keyframes f{
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    100% {
+        transform: translatex(-300px) translatey(300px);
+    }
+}
+/*kode for  høyre bevegelse*/
+@keyframes a{
+    0%{}
+    100%{
+        right: 110%;
+    }  
+}
+
+/*kode for  venstre bevegelse*/
+@keyframes b{
+    0%{}
+    100%{
+        left: 110%;
+    }
+}
